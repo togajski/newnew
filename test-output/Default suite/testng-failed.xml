@@ -6,7 +6,7 @@
       <class name="test_case_one.NewTest">
         <methods>
           <include name="afterMethod"/>
-          <include name="navigateToUrl"/>
+          <include name="executeCase"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- test_case_one.NewTest -->
