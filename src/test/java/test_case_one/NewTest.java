@@ -119,7 +119,7 @@ public class NewTest {
   
   
   
- // @Test(priority = 2)
+  @Test(priority = 2)
   public void footer() throws InterruptedException {
 	//footer-social links & clutch
 			String clickLink = Keys.chord(Keys.CONTROL, Keys.ENTER);
