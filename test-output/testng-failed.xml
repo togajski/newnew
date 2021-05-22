@@ -6,8 +6,9 @@
       <class name="test_case_one.NewTest">
         <methods>
           <include name="afterMethod"/>
-          <include name="executeCase"/>
+          <include name="launchBrowser"/>
           <include name="beforeMethod"/>
+          <include name="footer"/>
         </methods>
       </class> <!-- test_case_one.NewTest -->
     </classes>
