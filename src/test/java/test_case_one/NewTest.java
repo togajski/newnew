@@ -102,7 +102,9 @@ public class NewTest {
 	  
 	  WebElement arrowNext = driver.findElement(By.xpath("//button[@class='css-wsqny1 ee0xsp84']//div[@class='css-jetvm4 ee0xsp81']"));
 	  arrowNext.click();
+	  Thread.sleep(2000);
 	  arrowNext.click();
+	  Thread.sleep(2000);
 	  
   }
   
@@ -114,12 +116,45 @@ public class NewTest {
   }
   
   public void sleep() throws InterruptedException {
-	  Thread.sleep(10000);
+	  //Thread.sleep(10000);
+  }
+  
+  
+  @Test(priority = 2)
+  public void about() throws InterruptedException {
+	  WebElement aboutus = driver.findElement(By.xpath("//a[@class='css-rvg6o4 e62olcv2'][contains(text(),'About Us')]"));
+	  aboutus.click();
+	  WebElement ourTeamsDiv = driver.findElement(By.xpath("//div[@class='css-l5s78l e1hq3nxf4']"));
+	  Point point = ourTeamsDiv.getLocation();
+	  int x_coordinate = point.getX();
+	  int y_coordinate = point.getY();
+	  scrollToElement1 (x_coordinate, y_coordinate);
+	  Thread.sleep(2000);
+	  //WebElement ourTeamDiv = driver.findElement(By.xpath("//div[@class='css-l5s78l e1hq3nxf4']"));
+	  WebElement ourTeamsDiv1 = driver.findElement(By.xpath("//div[@class='css-l5s78l e1hq3nxf4']"));
+	  System.out.println(ourTeamsDiv1.findElements(By.tagName("p")).size());
+	  for(int i=1;i<ourTeamsDiv1.findElements(By.tagName("p")).size();i++) {
+		  ourTeamsDiv1.findElements(By.tagName("p")).get(i).click();
+		  Thread.sleep(2000);
+		  
+		  //ne radi gore petlja trenutno
+	  
+	  
+		  
+	  }
+	 	  
+  }
+  
+public void scrollToElement1(int x, int y) {
+	  
+	  JavascriptExecutor javScriptExec = (JavascriptExecutor) driver;
+	  javScriptExec.executeScript("window.scrollBy(" + x + ", " + y + ");");
+	  
   }
   
   
   
-  @Test(priority = 2)
+  @Test(priority = 3)
   public void footer() throws InterruptedException {
 	//footer-social links & clutch
 			String clickLink = Keys.chord(Keys.CONTROL, Keys.ENTER);
