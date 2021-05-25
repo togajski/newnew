@@ -47,16 +47,22 @@ public class NewTest {
 	//header
 	WebElement projects = driver.findElement(By.xpath("//a[@class='css-rvg6o4 e62olcv2'][contains(text(),'Projects')]")); 
 	projects.click();
+	Thread.sleep(2000);
 	WebElement services = driver.findElement(By.xpath("//a[@class='css-rvg6o4 e62olcv2'][contains(text(),'Services')]"));
 	services.click();
+	Thread.sleep(2000);
 	WebElement aboutus = driver.findElement(By.xpath("//a[@class='css-rvg6o4 e62olcv2'][contains(text(),'About Us')]"));
 	aboutus.click();
+	Thread.sleep(2000);
 	WebElement blog = driver.findElement(By.xpath("//a[@class='css-rvg6o4 e62olcv2'][contains(text(),'Blog')]"));
 	blog.click();
+	Thread.sleep(2000);
 	WebElement careers = driver.findElement(By.xpath("//a[@class='css-rvg6o4 e62olcv2'][contains(text(),'Careers')]"));
 	careers.click();
+	Thread.sleep(2000);
 	WebElement contactus = driver.findElement(By.xpath("//button[contains(text(),'Contact Us')]"));
 	contactus.click();
+	Thread.sleep(2000);
 	
 	//checkboxes
 	WebElement mobileApp = driver.findElement(By.xpath("//div[@id='__next']//div[1]//div[2]//div[1]//div[1]//div[1]//div[1]"));
@@ -131,21 +137,86 @@ public class NewTest {
 	  scrollToElement1 (x_coordinate, y_coordinate);
 	  Thread.sleep(2000);
 	  //WebElement ourTeamDiv = driver.findElement(By.xpath("//div[@class='css-l5s78l e1hq3nxf4']"));
-	  WebElement ourTeamsDiv1 = driver.findElement(By.xpath("//div[@class='css-l5s78l e1hq3nxf4']"));
+	  /*WebElement ourTeamsDiv1 = driver.findElement(By.xpath("//div[@class='css-l5s78l e1hq3nxf4']"));
 	  System.out.println(ourTeamsDiv1.findElements(By.tagName("p")).size());
 	  for(int i=1;i<ourTeamsDiv1.findElements(By.tagName("p")).size();i++) {
 		  ourTeamsDiv1.findElements(By.tagName("p")).get(i).click();
-		  Thread.sleep(2000);
-		  
+		  Thread.sleep(2000);*/
 		  //ne radi gore petlja trenutno
 	  
+	  WebElement productDesign = driver.findElement(By.xpath("//p[contains(text(),'Product design')]"));
+	  productDesign.click();
+	  //Thread.sleep(2000);
+	  WebElement webDevelopment = driver.findElement(By.xpath("//p[contains(text(),'Web development')]"));
+	  webDevelopment.click();
+	  //Thread.sleep(2000);
+	  WebElement mobileDev = driver.findElement(By.xpath("//p[contains(text(),'Mobile development')]"));
+	  mobileDev.click();
+	  //Thread.sleep(2000);
+	  WebElement qA = driver.findElement(By.xpath("//p[contains(text(),'Quality assurance')]"));
+	  qA.click();
+	  //Thread.sleep(2000);
+	  WebElement marketing = driver.findElement(By.xpath("//p[contains(text(),'Marketing')]"));
+	  marketing.click();
+	  //Thread.sleep(2000);
+	  WebElement projectMng = driver.findElement(By.xpath("//p[contains(text(),'Project management')]"));
+	  projectMng.click();
+	  //Thread.sleep(2000);
+	  WebElement humanRes = driver.findElement(By.xpath("//p[contains(text(),'Human resources')]"));
+	  humanRes.click();
+	  //Thread.sleep(2000);
+	  WebElement sales = driver.findElement(By.xpath("//p[contains(text(),'Sales')]"));
+	  sales.click();
+	  //Thread.sleep(2000);
+	  WebElement fluffyFriends = driver.findElement(By.xpath("//p[contains(text(),'Fluffy friends')]"));
+	  fluffyFriends.click();
+	  //Thread.sleep(2000);
 	  
-		  
-	  }
+	  //WebElement picturesDiv = driver.findElement(By.xpath("//body/div[@id='__next']/main[@class='css-0 e18wief60']/div[5]"));
+	  /*Point point1 = picturesDiv.getLocation();
+	  int x1_coordinates = point1.getX();
+	  int x2_coordinates = point1.getY();
+	  scrollToElement1 (x1_coordinates, x2_coordinates);
+	  Thread.sleep(2000);*/
+	  
+	  WebElement ourTeamArrow = driver.findElement(By.xpath("//body/div[@id='__next']/main[@class='css-0 e18wief60']/div[5]/div[1]/div[1]/div[2]/button[2]/div[1]"));
+	  ourTeamArrow.click();
+	  Thread.sleep(2000);
+	  ourTeamArrow.click();
+	  Thread.sleep(2000);
+	  ourTeamArrow.click();
+	  Thread.sleep(2000);
+	  
+	  String clickLinkedIn = Keys.chord(Keys.CONTROL, Keys.ENTER);
+	  WebElement ivanProfile = driver.findElement(By.xpath("//a[@href=\"https://www.linkedin.com/in/real-ivan-kovac/\"]"));
+	  ivanProfile.sendKeys(clickLinkedIn);
+	  Thread.sleep(2000);
+	  WebElement matejaProfile = driver.findElement(By.xpath("//a[@href=\"https://www.linkedin.com/in/mateja-bartolovic-aa20a26a/\"]"));
+	  matejaProfile.sendKeys(clickLinkedIn);
+	  WebElement mladenProfile = driver.findElement(By.xpath("//a[@href=\"https://www.linkedin.com/in/mladen-simic/\"]"));
+	  mladenProfile.sendKeys(clickLinkedIn);
+	  
+	  WebElement officesArrow = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/main[1]/div[8]/div[1]/div[1]/div[2]/button[2]/div[1]"));
+	  officesArrow.click();
+	  Thread.sleep(2000);
+	  officesArrow.click();
+	  Thread.sleep(2000);
+	  
+	  WebElement projectsArrowNext = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/main[1]/div[9]/div[1]/div[2]/div[1]/button[2]/div[1]"));
+	  projectsArrowNext.click();
+	  Thread.sleep(2000);
+	  projectsArrowNext.click();
+	  Thread.sleep(2000);
+	  projectsArrowNext.click();
+	  Thread.sleep(2000);
+	  projectsArrowNext.click();
+	  WebElement projectsArrowBack = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/main[1]/div[9]/div[1]/div[2]/div[1]/button[1]/div[1]"));
+	  projectsArrowBack.click();
+	  Thread.sleep(2000);
 	 	  
   }
   
-public void scrollToElement1(int x, int y) {
+  public void scrollToElement1(int x, int y) {
 	  
 	  JavascriptExecutor javScriptExec = (JavascriptExecutor) driver;
 	  javScriptExec.executeScript("window.scrollBy(" + x + ", " + y + ");");

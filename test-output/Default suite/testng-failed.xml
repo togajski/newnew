@@ -5,6 +5,8 @@
     <classes>
       <class name="test_case_one.NewTest">
         <methods>
+          <include name="header"/>
+          <include name="services"/>
           <include name="afterMethod"/>
           <include name="about"/>
           <include name="launchBrowser"/>
