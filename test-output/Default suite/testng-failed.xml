@@ -5,13 +5,10 @@
     <classes>
       <class name="test_case_one.NewTest">
         <methods>
-          <include name="header"/>
-          <include name="services"/>
           <include name="afterMethod"/>
-          <include name="about"/>
           <include name="launchBrowser"/>
           <include name="beforeMethod"/>
-          <include name="footer"/>
+          <include name="careers"/>
         </methods>
       </class> <!-- test_case_one.NewTest -->
     </classes>

@@ -223,9 +223,62 @@ public class NewTest {
 	  
   }
   
+ @Test (priority = 5)
+ public void careers() throws InterruptedException {
+	 
+	 WebElement careers1 = driver.findElement(By.xpath("//a[@class='css-1cw6wdp e62olcv2'][contains(text(),'Careers')]"));
+	 careers1.click();
+	 WebElement positionsAll = driver.findElement(By.xpath("//div[contains(text(),'All')]"));
+	 positionsAll.click();
+	 WebElement positionsDesign = driver.findElement(By.xpath("//div[contains(text(),'Design')]"));
+	 positionsDesign.click();
+	 Thread.sleep(2000);
+	 WebElement development = driver.findElement(By.xpath("//div[contains(text(),'Development')]"));
+	 development.click();
+	 Thread.sleep(2000);
+	 WebElement qualityAssurance = driver.findElement(By.xpath("//div[contains(text(),'Quality Assurance')]"));
+	 qualityAssurance.click();
+	 Thread.sleep(2000);
+	 WebElement projectMan = driver.findElement(By.xpath("//div[contains(text(),'Project Management')]"));
+	 projectMan.click();
+	 Thread.sleep(2000);
+	 WebElement operations = driver.findElement(By.xpath("//div[contains(text(),'Operations')]"));
+	 operations.click();
+	 
+	 //click quotove
+	 
+	 WebElement arrowNext1 = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/main[1]/div[8]/div[2]/div[1]/div[1]/button[2]/div[1]"));
+	 arrowNext1.click();
+	 Thread.sleep(1000);
+	 arrowNext1.click();
+	 Thread.sleep(1000);
+	 arrowNext1.click();
+	 WebElement arrowBack1 = driver.findElement(By.xpath("//div[@class='css-1dzw0v1 ekdqcgk5']//button[1]"));
+	 arrowBack1.click();
+	 
+	 //open application
+	 WebElement fullName = driver.findElement(By.xpath("//body/div[@id='__next']/main[@class='css-4igd5r e18wief60']/div[@class='css-1753y98 ev30vt09']/form/div[@class='css-10qj97d e4b9uf50']/div[@class='css-1a5frwm ev30vt05']/div[1]/div[1]/input[1]"));
+	 fullName.sendKeys("Izidor Kršnjavog");
+	 WebElement email = driver.findElement(By.xpath("//div[@class='css-1jbglpz ev30vt04']//div[2]//input[1]"));
+	 email.sendKeys("izidor@gmail.com");
+	 WebElement phone = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/main[1]/div[10]/form[1]/div[1]/div[1]/div[2]/div[1]/input[1]"));
+	 phone.sendKeys("0988898765");
+	 WebElement position = driver.findElement(By.xpath("//option[contains(text(),'Frontend developer')]"));
+	 position.click();
+	 WebElement details = driver.findElement(By.xpath("//textarea[@placeholder='a']"));
+	 details.sendKeys("Bok, ja sam Izidor i prijavljujem se ovdje.");
+	 WebElement disclaimer = driver.findElement(By.xpath("//div[@class='css-myrvpa e1wnkp8s4']"));
+	 disclaimer.click();
+	 WebElement dAd = driver.findElement(By.xpath("//div[@class='css-1qf5ncn e1r5c6ul4']//input"));
+	 dAd.sendKeys("A:\\testcase.txt");
+	 
+	 
+	  
+  }
   
   
-  @Test(priority = 3)
+  
+  @Test(priority = 4)
   public void footer() throws InterruptedException {
 	//footer-social links & clutch
 			String clickLink = Keys.chord(Keys.CONTROL, Keys.ENTER);
